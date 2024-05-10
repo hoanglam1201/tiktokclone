@@ -1,13 +1,19 @@
-import ProTypes from 'prop-types';
-const Avatar = (props) => {
-    return(
+import PropTypes from 'prop-types';
+const Avatar = ({ size = 'sm', ...props }) => {
+    const sizeMap = {
+        sm: 'w-8 h-8',
+        md: 'w-[32px] h-[32px]',
+        lg: 'w-[56px] h-[56px]'
+    }
+    return (
         <div>
-            <img src={props.imageURL} alt={props.altText} className="rounded-full w-8"/>
+            <img src={props.imageURL} alt={props.altText} className={`rounded-full ${sizeMap[size]}`} />
         </div>
     )
 }
-Avatar.proTypes = {
-    imageURL: ProTypes.string,
-    altText: ProTypes.string
+Avatar.propTypes = {
+    imageURL: PropTypes.string,
+    altText: PropTypes.string,
+    size: PropTypes.string,
 }
 export default Avatar;

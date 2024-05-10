@@ -1,13 +1,12 @@
-import ProTypes from 'prop-types';
 import HomeIcon from './icons/HomeIcon';
 import MenuItems from './MenuItems';
 import FollowIcon from './icons/FollowIcon';
 import FriendsIcon from './icons/FriendsIcon';
 import DiscoverIcon from './icons/DiscoverIcon';
 import LiveIcon from './icons/LiveIcon';
-import Avatar from './Avatar';
 import FollowItems from './FollowItems';
 import { Link } from 'react-router-dom';
+
 const SideBar = () => {
     return (
         <ul>

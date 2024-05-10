@@ -1,5 +1,6 @@
 import ProTypes from 'prop-types';
 import BadgeIcon from './BadgeIcon';
+
 const BadgeButton = (props) => {
     return (
         <button className='relative mr-5 flex items-center justify-center ' >
@@ -12,7 +13,7 @@ const BadgeButton = (props) => {
         </button>
     )
 }
-BadgeButton.proTypes = {
+BadgeButton.propTypes = {
     icon: ProTypes.element,
     badgeCount: ProTypes.number,
 }

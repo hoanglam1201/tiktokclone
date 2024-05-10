@@ -4,7 +4,7 @@ import DefaultLayout from "../layouts/Default";
 const Homepage = () => {
     return(
         <DefaultLayout >
-            <div className="text-white"></div>
+            <div className="text-white mt-10"></div>
             <RecommendContainer></RecommendContainer>
         </DefaultLayout>
     )

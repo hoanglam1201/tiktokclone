@@ -1,28 +1,26 @@
-import ProTypes from 'prop-types'
-import Logo from '../components/logo';
+import PropTypes from 'prop-types'
+import Logo from '../components/Logo';
 import SearchInput from '../components/SearchInput';
 import Button from '../components/Button';
 import PlusIcon from '../components/icons/PlusIcon';
-import BadgeIcon from '../components/BadgeIcon';
 import MessageIcon from '../components/icons/MessageIcon';
 import InboxIcon from '../components/icons/InboxIcon';
 import Avatar from '../components/Avatar';
-import { useState } from 'react';
 import BadgeButton from '../components/BadgeButton';
 import SideBar from '../components/SideBar';
 import FollowAccount from '../components/FollowAccount';
-import '../index.css';
 import { Link } from 'react-router-dom';
+import '../index.css';
+
 const DefaultLayout = (props) => {
-    return(
+    return (
         <div className='bg-[#121212]'>
             <div className="header flex items-center justify-between bg-[#121212] px-[16px] py-[8px] border-b-1 border-b-gray">
                 <div>
                     <Logo></Logo>
-
                 </div>
                 <div>
-                    <SearchInput suggestionItems={['Tuxedo','Queens of tears']} placeholder="Tìm kiếm"></SearchInput>
+                    <SearchInput suggestionItems={['Tuxedo', 'Queens of tears']} placeholder="Tìm kiếm"></SearchInput>
                 </div>
                 <div className='flex items-center justify-between'>
                     <div className='mr-10 '>
@@ -53,7 +51,7 @@ const DefaultLayout = (props) => {
         </div>
     )
 }
-// DefaultLayout.protoTypes = {{
-//     children: ProTypes.element;
-// }}
+DefaultLayout.propTypes = {
+    children: PropTypes.element
+}
 export default DefaultLayout;

@@ -8,7 +8,7 @@ const MenuItems = (props) => {
         </li>
     )
 }
-MenuItems.proTypes = {
+MenuItems.propTypes = {
     icon: ProTypes.element,
     title: ProTypes.string,
 }
