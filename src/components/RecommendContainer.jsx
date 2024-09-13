@@ -1,14 +1,15 @@
 import videos from '../data/videos'
 import VideoPost from "./VideoPost";
 
-const RecommendContainer = () => {
+const RecommendContainer = (props) => {
     return (
         <div className='space-y-10'>
-            {videos.map((video) => {
+            {props.videos.map((video) => {
+                console.log(video);
                 return (
                     <div key={video.id} className='video' data-video-id={video.id}>
                         <VideoPost video={video} />
-                        <div className='h-[1px] w-full bg-gray-900 mt-6' />
+                        <div className='h-[1px] w-full bg-gray-800 mt-6' />
                     </div>
                 )
             })}

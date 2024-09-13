@@ -1,8 +1,9 @@
+import DefaultLayout from "../layouts/Default";
 const FollowingPage = () => {
     return(
-        <div>
-            Following
-        </div>
+        <DefaultLayout>
+            
+        </DefaultLayout>
     )
 }
 export default FollowingPage;

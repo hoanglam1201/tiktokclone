@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import Logo from '../components/Logo';
+import Logo from '../components/logo';
 import SearchInput from '../components/SearchInput';
 import Button from '../components/Button';
 import PlusIcon from '../components/icons/PlusIcon';
@@ -15,9 +15,11 @@ import '../index.css';
 const DefaultLayout = (props) => {
     return (
         <div className='bg-[#121212]'>
-            <div className="header flex items-center justify-between bg-[#121212] px-[16px] py-[8px] border-b-1 border-b-gray">
+            <div className="header fixed top-0 w-full z-50 flex items-center justify-between bg-[#121212] px-[16px] py-[8px] border-b-1 border-b-gray">
                 <div>
-                    <Logo></Logo>
+                    <Link to="/">
+                        <Logo></Logo>
+                    </Link>
                 </div>
                 <div>
                     <SearchInput suggestionItems={['Tuxedo', 'Queens of tears']} placeholder="Tìm kiếm"></SearchInput>
@@ -35,7 +37,7 @@ const DefaultLayout = (props) => {
                 </div>
             </div>
             <div className="body flex">
-                <div className="sidebar w-1/7 bg-[#121212] max-h-screen overflow-auto pr-10 mb-2">
+                <div className="sidebar fixed top-0 bottom-0 w-1/7 bg-[#121212] max-h-screen overflow-auto pr-10 mb-2">
                     <SideBar className='border-b-1 border-b-gray'></SideBar>
                     <div>
                         <div className='text-white mb-5 ml-3 '>Các tài khoản đang follow</div>
@@ -44,7 +46,7 @@ const DefaultLayout = (props) => {
                         </div>
                     </div>
                 </div>
-                <div className="content mx-auto w-2/5">
+                <div className={`content pt-16 ${props.wrapperClass}`}>
                     {props.children}
                 </div>
             </div>
@@ -52,6 +54,7 @@ const DefaultLayout = (props) => {
     )
 }
 DefaultLayout.propTypes = {
-    children: PropTypes.element
+    children: PropTypes.element,
+    wrapperClass:PropTypes.string
 }
 export default DefaultLayout;

@@ -1,8 +1,9 @@
+import DefaultLayout from "../layouts/Default";
 const FriendsPage = () => {
     return(
-        <div>
-            Friends
-        </div>
+        <DefaultLayout>
+            
+        </DefaultLayout>
     )
 }
 export default FriendsPage;

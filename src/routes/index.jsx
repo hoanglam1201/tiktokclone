@@ -8,6 +8,11 @@ import ProfilePage from "../pages/ProfilePage";
 import MessagePage from "../pages/MessagePage";
 import MailBoxesPage from "../pages/MailBoxesPage";
 import UploadPage from "../pages/UploadPage";
+import VideoContentPage from "../pages/VideoContentPage";
+import Admin from "../pages/Admin";
+import EditInfoPage from "../pages/EditInfoPage";
+import EditInfoUserPage from "../pages/EditInfoUserPage";
+import Login from "../pages/Login";
 
 const router = createBrowserRouter([
     {
@@ -46,5 +51,26 @@ const router = createBrowserRouter([
         path: '/uploadpage',
         element: <UploadPage/>,
     },
+    {
+        path: '/video/:id',
+        element:<VideoContentPage></VideoContentPage>
+    },
+    {
+        path: '/admin',
+        element:<Admin></Admin>
+    },
+    {
+        path: '/editvideo/:id',
+        element:<EditInfoPage></EditInfoPage>
+    },
+    {
+        path: '/edituser/:id',
+        element:<EditInfoUserPage></EditInfoUserPage>
+    },
+    {
+        path: '/login',
+        element:<Login></Login>
+    },
+    
 ]);
 export default router;

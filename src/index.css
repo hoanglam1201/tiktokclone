@@ -28,3 +28,6 @@
 .sidebar::-webkit-scrollbar-thumb:hover {
     background: #888; 
   }
+.relative:hover #popup{
+  display: block;
+}
